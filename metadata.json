@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Story Weaver",
+  "description": "An interactive multimodal storytelling guide powered by Gemini. Upload an image to start a story, and co-create an adventure by making choices, adding more images, or typing your own ideas.",
+  "requestFramePermissions": []
+}
