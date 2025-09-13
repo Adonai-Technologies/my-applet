@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 import type { StoryPart, ImageData, GeminiStoryResponse } from '../types';
 
@@ -70,7 +69,8 @@ export const generateStoryPart = async (
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
       model: "gemini-2.5-flash",
-      contents: [{ parts: contentParts }],
+      // FIX: The 'contents' field should be an object with a 'parts' array for a single-turn request, not an array of content objects.
+      contents: { parts: contentParts },
       config: {
         responseMimeType: "application/json",
         responseSchema,

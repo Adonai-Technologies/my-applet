@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import type { ImageData } from '../types';
 import Icon from './Icon';
@@ -77,7 +76,7 @@ const UserInput: React.FC<UserInputProps> = ({ onSend, onChoice, isLoading, choi
     <div className="bg-slate-800 p-4 border-t border-slate-700">
       <div className="max-w-4xl mx-auto">
         {choices && !isLoading && (
-          <div className="mb-4 space-y-2">
+          <div className="mb-4 space-y-2 animate-fade-in-up">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <button 
                   onClick={() => handleChoiceClick(choices[0])}
